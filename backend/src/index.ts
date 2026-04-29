@@ -1,11 +1,10 @@
 import express from "express";
+import rotasProdutos from "./routes/produtos";
+
 const app = express();
 const porta = 4000;
 
-// rota inicial
-app.get("/inicial", (req, res) => {
-  res.send("Bem-vindo à rota /inicial!");
-});
+app.use("/produtos", rotasProdutos);
 
 app.listen(porta, () => {
     console.log(`rodando na porta ${porta}`);
