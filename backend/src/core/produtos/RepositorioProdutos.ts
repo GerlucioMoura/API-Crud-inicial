@@ -1,4 +1,4 @@
-import Produto from "./produto";
+import Produto from "./Produto";
 
 export default class RepositorioProdutos {
     itens: Produto[] = [new Produto("colher", 5.99),
@@ -9,5 +9,8 @@ export default class RepositorioProdutos {
         obterTodos() {
             return this.itens;
         }
-
+        novo(nome: string, preco: number) {
+            const novoProduto = new Produto(nome, preco);
+            this.itens.push(novoProduto);
+        }
 }   

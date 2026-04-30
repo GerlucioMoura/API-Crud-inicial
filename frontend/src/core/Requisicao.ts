@@ -1,7 +1,7 @@
 export default class Requisicao {
     static headers: any = {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "*", 
     };
 
     static porta: number = 4000;
